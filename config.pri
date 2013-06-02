@@ -3,36 +3,150 @@ BASEDIR =  $$quote($$_PRO_FILE_PWD_)
 
 device {
     CONFIG(debug, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/applicationui.cpp) \
+        INCLUDEPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
+
+        DEPENDPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
+
+        SOURCES +=  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_frame.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_network.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue.cpp) \
+                 $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/mylistmodel.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/applicationui.hpp) \
+        HEADERS +=  $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/pubsub/EmitLog.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/pubsub/ReceiveLog.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_frame.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_global.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_message.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_network.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/routing/EmitLogDirect.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/routing/ReceiveLogDirect.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/sendreceive/Receive.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/sendreceive/Send.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/workqueues/NewTask.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/workqueues/Worker.h) \
+                 $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/mylistmodel.hpp)
     }
 
     CONFIG(release, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/applicationui.cpp) \
+        INCLUDEPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
+
+        DEPENDPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
+
+        SOURCES +=  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_frame.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_network.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue.cpp) \
+                 $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/mylistmodel.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/applicationui.hpp) \
+        HEADERS +=  $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/pubsub/EmitLog.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/pubsub/ReceiveLog.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_frame.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_global.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_message.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_network.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/routing/EmitLogDirect.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/routing/ReceiveLogDirect.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/sendreceive/Receive.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/sendreceive/Send.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/workqueues/NewTask.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/workqueues/Worker.h) \
+                 $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/mylistmodel.hpp)
     }
 }
 
 simulator {
     CONFIG(debug, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/applicationui.cpp) \
+        INCLUDEPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
+
+        DEPENDPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
+
+        SOURCES +=  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_frame.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_network.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue.cpp) \
+                 $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/mylistmodel.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/applicationui.hpp) \
+        HEADERS +=  $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/pubsub/EmitLog.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/pubsub/ReceiveLog.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_exchange_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_frame.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_global.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_message.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_network.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_queue_p.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/routing/EmitLogDirect.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/routing/ReceiveLogDirect.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/sendreceive/Receive.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/sendreceive/Send.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/workqueues/NewTask.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/workqueues/Worker.h) \
+                 $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/mylistmodel.hpp)
     }
 }
 
-INCLUDEPATH +=  $$quote($$BASEDIR/src)
+INCLUDEPATH +=  $$quote($$BASEDIR/src/QAMQP/src/sendreceive) \
+         $$quote($$BASEDIR/src/QAMQP/src) \
+         $$quote($$BASEDIR/src/QAMQP/src/pubsub) \
+         $$quote($$BASEDIR/src) \
+         $$quote($$BASEDIR/src/QAMQP/src/qamqp) \
+         $$quote($$BASEDIR/src/QAMQP/src/workqueues) \
+         $$quote($$BASEDIR/src/QAMQP/src/routing)
 
 CONFIG += precompile_header
 
