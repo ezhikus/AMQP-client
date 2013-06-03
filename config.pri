@@ -7,7 +7,8 @@ device {
 
         DEPENDPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
 
-        SOURCES +=  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/MainModel.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.cpp) \
@@ -19,7 +20,8 @@ device {
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/mylistmodel.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
+        HEADERS +=  $$quote($$BASEDIR/src/MainModel.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/pubsub/EmitLog.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/pubsub/ReceiveLog.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.h) \
@@ -52,7 +54,8 @@ device {
 
         DEPENDPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
 
-        SOURCES +=  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/MainModel.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.cpp) \
@@ -64,7 +67,8 @@ device {
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/mylistmodel.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
+        HEADERS +=  $$quote($$BASEDIR/src/MainModel.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/pubsub/EmitLog.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/pubsub/ReceiveLog.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.h) \
@@ -99,7 +103,8 @@ simulator {
 
         DEPENDPATH +=  $$quote(C:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtNetwork)
 
-        SOURCES +=  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/MainModel.cpp) \
+                 $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_authenticator.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_channel.cpp) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp_connection.cpp) \
@@ -111,7 +116,8 @@ simulator {
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/mylistmodel.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
+        HEADERS +=  $$quote($$BASEDIR/src/MainModel.h) \
+                 $$quote($$BASEDIR/src/QAMQP/src/QamqpApp.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/pubsub/EmitLog.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/pubsub/ReceiveLog.h) \
                  $$quote($$BASEDIR/src/QAMQP/src/qamqp/amqp.h) \
@@ -143,8 +149,8 @@ simulator {
 INCLUDEPATH +=  $$quote($$BASEDIR/src/QAMQP/src/sendreceive) \
          $$quote($$BASEDIR/src/QAMQP/src) \
          $$quote($$BASEDIR/src/QAMQP/src/pubsub) \
-         $$quote($$BASEDIR/src) \
          $$quote($$BASEDIR/src/QAMQP/src/qamqp) \
+         $$quote($$BASEDIR/src) \
          $$quote($$BASEDIR/src/QAMQP/src/workqueues) \
          $$quote($$BASEDIR/src/QAMQP/src/routing)
 

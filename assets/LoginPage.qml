@@ -26,6 +26,7 @@ Page {
             LoginPageElement {
                 id: port
                 labelText: "Port"
+                editText: "5672"
                 editInputMode: TextFieldInputMode.NumbersAndPunctuation
             }
 
@@ -51,6 +52,9 @@ Page {
                 text: "Login"
                 horizontalAlignment: HorizontalAlignment.Center
                 topMargin: 50.0
+                onClicked: {
+                    mainModel.Login(server.editText, port.editText, login.editText, password.editText)
+                }
             }
 
         }
