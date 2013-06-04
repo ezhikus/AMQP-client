@@ -12,6 +12,9 @@ public:
 	MainModel();
 
 	Q_INVOKABLE void Login(QString server, QString port, QString login, QString password);
+
+public slots:
+	void Connected();
 };
 
 #endif

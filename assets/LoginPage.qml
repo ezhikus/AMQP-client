@@ -21,6 +21,7 @@ Page {
             LoginPageElement {
                 id: server
                 labelText: "Server"
+                editText: "54.225.107.232"
             }
 
             LoginPageElement {
@@ -39,7 +40,7 @@ Page {
             LoginPageElement {
                 id: password
                 labelText: "Password"
-                editText: "guest"
+                editText: "grrHiadqCxMZjKz57Mn9"
                 editInputMode: TextFieldInputMode.Password
             }
             
