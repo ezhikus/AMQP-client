@@ -30,6 +30,7 @@ namespace QAMQP
 		void open();
 		void close(int code, const QString & text, int classId = 0, int methodId = 0);
 		void closeOk();	
+		void openError();
 
 		bool isConnected() const;
 
@@ -38,11 +39,14 @@ namespace QAMQP
 	Q_SIGNALS:
 		void disconnected();
 		void connected();
+		void connectionError();
+
 	protected:
 		ConnectionPrivate * const pd_ptr;
 
 	private:
 		void openOk();
+
 		friend class ClientPrivate;
 		friend class ChannelPrivate;
 

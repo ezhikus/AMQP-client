@@ -14,11 +14,16 @@ void MainModel::Login(QString server, QString port, QString login, QString passw
 	QUrl con(connectionString);
 	QAMQP::Client *client_ = new QAMQP::Client(this);
 	connect(client_, SIGNAL(connected()), this, SLOT(Connected()));
-	connect(client_, SIGNAL(disconnected()), this, SLOT(Connected()));
+	connect(client_, SIGNAL(connectionError()), this, SLOT(ConnectionError()));
 	client_->open(con);
 }
 
 void MainModel::Connected()
 {
 	qDebug() << "Connected";
+}
+
+void MainModel::ConnectionError()
+{
+	qDebug() << "Connection error";
 }

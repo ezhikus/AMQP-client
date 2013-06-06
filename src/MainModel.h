@@ -15,6 +15,7 @@ public:
 
 public slots:
 	void Connected();
+	void ConnectionError();
 };
 
 #endif

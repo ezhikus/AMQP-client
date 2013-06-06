@@ -10,6 +10,7 @@ QAMQP::Network::Network( QObject * parent /*= 0*/ ):QObject(parent)
 	buffer_.reserve(Frame::HEADER_SIZE);
 	timeOut_ = 1000;
 	connect_ = false;
+	autoReconnect_ = false;
 
 	initSocket(false);
 }
@@ -89,6 +90,8 @@ void QAMQP::Network::error( QAbstractSocket::SocketError socketError )
 		QTimer::singleShot(timeOut_, this, SLOT(connectTo()));
 	}
 
+	QAMQP::Frame::Method frame(QAMQP::Frame::fcConnection, 60);
+	m_pMethodHandlerConnection->_q_method(frame);
 }
 
 void QAMQP::Network::readyRead()

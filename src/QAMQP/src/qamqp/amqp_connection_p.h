@@ -21,13 +21,16 @@ namespace QAMQP
 			METHOD_ID_ENUM(miSecure, 20),
 			METHOD_ID_ENUM(miTune, 30),
 			METHOD_ID_ENUM(miOpen, 40),
-			METHOD_ID_ENUM(miClose, 50)
+			METHOD_ID_ENUM(miClose, 50),
+			METHOD_ID_ENUM(miOpenError, 60)
+
 		};
 
 		ConnectionPrivate(Connection * q);
 		~ConnectionPrivate();
 		void init(Client * parent);
 		void startOk();
+		void openError();
 		void secureOk();
 		void tuneOk();
 		void open();

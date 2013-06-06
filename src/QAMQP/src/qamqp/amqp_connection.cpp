@@ -80,9 +80,13 @@ void ConnectionPrivate::startOk()
 	client_->pd_func()->network_->sendFrame(frame);	
 }
 
+void ConnectionPrivate::openError()
+{
+	pq_func()->openError();
+}
+
 void ConnectionPrivate::secureOk()
 {
-
 
 }
 
@@ -293,6 +297,9 @@ bool ConnectionPrivate::_q_method( const QAMQP::Frame::Method & frame )
 		case miCloseOk:
 			closeOk(frame);
 			break;
+		case miOpenError:
+			openError();
+			break;
 		default:
 			qWarning("Unknown method-id %d", frame.id());
 			return false;
@@ -363,6 +370,11 @@ void Connection::closeOk()
 void Connection::openOk()
 {
 	emit connected();
+}
+
+void Connection::openError()
+{
+	emit connectionError();
 }
 
 void Connection::_q_method(const QAMQP::Frame::Method & frame)

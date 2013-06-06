@@ -64,6 +64,7 @@ void ClientPrivate::init(QObject * parent)
 	setAuth(new AMQPlainAuthenticator(QString::fromLatin1(AMQPLOGIN), QString::fromLatin1(AMQPPSWD)));
 
 	QObject::connect(connection_, SIGNAL(connected()), pq_func(), SIGNAL(connected()));
+	QObject::connect(connection_, SIGNAL(connectionError()), pq_func(), SIGNAL(connectionError()));
 	QObject::connect(connection_, SIGNAL(disconnected()), pq_func(), SIGNAL(disconnected()));
 }
 
